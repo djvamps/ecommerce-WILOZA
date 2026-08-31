@@ -1,13 +1,20 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "Next.js",
-  description:
-    "Beautifully designed template built with Next.js, Shadcn UI, Tailwind CSS, and Cosmic.",
+  name: "WILOZA",
+  description: "Tienda de ropa oversize y streetwear para desarrolladores.",
   mainNav: [
     {
-      title: "Home",
+      title: "Catálogo",
       href: "/",
+    },
+    {
+      title: "Colecciones",
+      href: "/#colecciones",
+    },
+    {
+      title: "Contacto",
+      href: "/#contacto",
     },
   ],
   links: {
