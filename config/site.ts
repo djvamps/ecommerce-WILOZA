@@ -19,8 +19,8 @@ export const siteConfig: SiteConfig = {
   name: "WILOZA",
   description:
     "Ropa streetwear oversize diseñada para desarrolladores y diseñadores UX/UI que valoran tanto la sintaxis limpia como la estética impecable. Diseños con actitud, algodón premium de máximo confort para largas sesiones de trabajo y un fit moderno que conecta tu pasión tech con la cultura urbana. Explora la colección y lleva tu setup outfit al siguiente nivel.",
-  url: "https://wiloza.vercel.app", // Cambia por tu dominio real
-  ogImage: "https://wiloza.vercel.app/wiloza_fanpage.jpg", // Ruta a tu imagen de vista previa
+  url: "https://www.wiloza.com", // Cambia por tu dominio real
+  ogImage: "https://www.wiloza.com/wiloza_fanpage.jpg", // Ruta a tu imagen de vista previa
   mainNav: [
     {
       title: "Catálogo",
