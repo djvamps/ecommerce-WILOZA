@@ -46,6 +46,7 @@ export default async function PoloDetailPage({
               height={600}
               priority
               className="h-auto max-h-[500px] w-full object-contain"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           )}
         </div>
