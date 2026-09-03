@@ -39,9 +39,12 @@ export default async function PoloDetailPage({
         {/* Imagen del Producto */}
         <div className="flex items-center justify-center rounded-2xl bg-[#0d0e11] p-8">
           {imageUrl && (
-            <img
+            <Image
               src={imageUrl}
               alt={polo.title}
+              width={800}
+              height={600}
+              priority
               className="h-auto max-h-[500px] w-full object-contain"
             />
           )}
