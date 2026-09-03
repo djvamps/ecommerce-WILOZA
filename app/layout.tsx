@@ -1,3 +1,5 @@
+import Script from "next/script"
+
 import "@/styles/globals.css"
 import { Suspense } from "react"
 import { Metadata, Viewport } from "next"
@@ -71,6 +73,25 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <TailwindIndicator />
           </ThemeProvider>
         </Suspense>
+
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-4TYKW6F9T6"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4TYKW6F9T6');
+            `,
+          }}
+        />
       </body>
     </html>
   )
