@@ -22,6 +22,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  other: {
+    "msvalidate.01": "F132A4356CE0D3262956FB85974A4BD7",
+  },
   openGraph: {
     type: "website",
     locale: "es_PE",
