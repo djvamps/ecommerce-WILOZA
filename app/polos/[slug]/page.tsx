@@ -54,7 +54,7 @@ export default async function PoloDetailPage({
         {/* Información y Compra */}
         <div className="flex flex-col gap-6">
           <div>
-            <h1 className="mb-2 text-4xl font-extrabold text-white">
+            <h1 className="mb-2 text-4xl font-extrabold text-slate-900">
               {polo.title}
             </h1>
             <p className="text-3xl font-bold text-[#00c980]">S/ {precio}</p>
@@ -68,7 +68,7 @@ export default async function PoloDetailPage({
             slug={polo.slug}
           />
 
-          <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+          <p className="mt-2 text-sm leading-relaxed text-slate-600">
             Polo de algodón reactivo de alta densidad. Corte oversize premium
             con estampados en serigrafía digital.
           </p>

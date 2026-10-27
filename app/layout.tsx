@@ -11,6 +11,7 @@ import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
+import { CartProvider } from "@/lib/cart-context"
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -58,23 +59,26 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="es" suppressHydrationWarning>
       <body
         className={cn(
-          "mx-auto flex min-h-screen w-full flex-col justify-between bg-[#0a0a0a] font-sans text-white antialiased",
+          "mx-auto flex min-h-screen w-full flex-col justify-between bg-slate-50 font-sans text-slate-900",
           fontSans.variable
         )}
       >
         <Suspense>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            enableSystem={false}
-          >
-            <div className="relative flex min-h-screen flex-col">
-              <SiteHeader />
-              <main className="flex-1">{children}</main>
-              <SiteFooter />
-            </div>
-            <TailwindIndicator />
-          </ThemeProvider>
+      
+<ThemeProvider
+  attribute="class"
+  defaultTheme="light"
+  forcedTheme="light"
+  enableSystem={false}
+>
+<CartProvider>
+    <div className="relative flex min-h-screen flex-col">
+      <SiteHeader />
+      <main className="flex-1">{children}</main>
+      <SiteFooter />
+    </div>
+  </CartProvider>
+</ThemeProvider>
         </Suspense>
 
         {/* Google Analytics */}
